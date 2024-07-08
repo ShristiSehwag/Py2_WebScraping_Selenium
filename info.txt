@@ -1,0 +1,1 @@
+using selenaium to retrive the static values form web scrapping
