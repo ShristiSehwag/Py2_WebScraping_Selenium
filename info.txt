@@ -1,1 +1,7 @@
-using selenaium to retrive the static values form web scrapping
+XPath:
+Hirerchical route to read the html script of the web page
+
+1. staticEle: using selenaium to retrive the static values form web scrapping
+
+2. dynamicEle: Using selenaium to retrive the dynamic values form web scrapping.
+

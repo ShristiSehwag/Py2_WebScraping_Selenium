@@ -1,5 +1,6 @@
 # import selenium
 from selenium import webdriver
+import time
 ## for local IDE
 # from selenium.webdriver.chrome.service import Service
 # service = Service(executable_path="C:\chromedriver.exe")
@@ -19,12 +20,39 @@ def get_driver():
   driver.get('https://automated.pythonanywhere.com')
   
   return driver 
+  
 
-def main():
+def clean_text(text):
+  """Extract only the temperature from text"""
+  # gives list of text, convert to float
+  output = float(text.split(": ")[1])
+  return output
+
+
+
+def staticEle():
+  """to extract static data"""
+  
   driver = get_driver()
-  # we use the xpath to find the element
   element = driver.find_element(by='xpath',value ='/html/body/div[1]/div/h1[1]')
   return element.text
 
-print(main())
+
+
+def dynamicEle():
+  """to extract dynmaic data (frequently changing)"""
+  driverD = get_driver()
+  time.sleep(2) # stay on page for 2 seconds and then extract 
+  elementD = driverD.find_element(by='xpath',value ='/html/body/div[1]/div/h1[2]')
+  return clean_text(elementD.text)
+
+print("Static code : " + staticEle())
+
+print()
+
+print("Dynamic code : " + str(dynamicEle()))
+
+
+
+
   
