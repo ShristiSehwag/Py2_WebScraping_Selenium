@@ -1,4 +1,4 @@
-# 2. Web Scraping Using Selenium - Static Objects
+# 2. Web Scraping Using Selenium 
 
 Selenium is a robust tool for automating web browsers through programming. It supports all major browsers and operating systems, with script languages like Python, Java, and C#. Mastering Selenium enables automation of daily tasks such as tweeting, messaging on WhatsApp, and web browsing, all within 15-30 lines of Python code. Automation possibilities with Selenium are limitless.
 
@@ -17,6 +17,6 @@ A Chrome WebDriver instance is created using `webdriver.Chrome()` with the speci
 The WebDriver navigates to the URL `https://automated.pythonanywhere.com` using `driver.get()`. This demonstrates how Selenium can automate browsing to specific web pages.
 
 9. Finding and Retrieving Element Text:
-In the `main()` function, the WebDriver finds a specific HTML element using its XPath (`/html/body/div[1]/div/h1[1]`) with `driver.find_element()`. It then retrieves the text content of this element using `element.text` and returns it.
+In the `staticEle/dynamicEle` function, the WebDriver finds a specific HTML element using its XPath (`/html/body/div[1]/div/h1[1]`) with `driver.find_element()`. It then retrieves the text content of this element using `element.text` and returns it.
 
 Overall, we set up a Selenium WebDriver for Chrome, navigate to a webpage, and extract text from a specific element using XPath.
